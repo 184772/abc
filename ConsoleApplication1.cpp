@@ -9,6 +9,7 @@ using namespace std;
 
 void clear(void)
 {
+    
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
@@ -28,7 +29,7 @@ int main()
         stringstream ss;
         ss << x << y;
         string result = ss.str();
-        if (regex_match(result, regex("^[0-9]{0,6}$")))
+        if (regex_match(result, regex("^[1-9]{0,6}$")))
         {
 
             cout << x + y << endl << "hello world" << endl;
@@ -42,7 +43,7 @@ int main()
         }
         else
             cout << "格式错误，请重新输入" << endl;
-        clear();
+       
     } while (1);
 }
 
